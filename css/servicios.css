@@ -1,0 +1,190 @@
+/* =========================
+   RESET GENERAL
+   =========================
+   Elimina márgenes y paddings por defecto.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   HERO DE SERVICIOS
+   =========================
+   Sección principal superior.
+*/
+.page-hero {
+    color: #000000;
+    padding: 30px;
+}
+
+.page-hero p,
+.page-hero .hero-copy p,
+.page-hero .hero-label {
+    color: #000000;
+}
+
+/* =========================
+   CONTENEDOR DE SERVICIOS
+   =========================
+*/
+.servicios-container {
+    margin: 40px 0;
+}
+
+.servicios-container h2 {
+    font-size: 2.2rem;
+    color: #000000;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+/* =========================
+   TARJETAS DE SERVICIOS
+   =========================
+*/
+.servicio-card {
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+    border-left: 5px solid #1d4ed8;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    background-color: #ffffff;
+}
+
+.servicio-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+    flex-shrink: 0;
+}
+
+.servicio-content h3 {
+    font-size: 1.4rem;
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.servicio-content p {
+    color: #475569;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* =========================
+   GALERÍA MULTIMEDIA
+   =========================
+*/
+.galeria-multimedia {
+    background: linear-gradient(135deg, #f0f9ff 0%, #f0f4f8 100%);
+    border-radius: 20px;
+    padding: 40px;
+    margin-top: 40px;
+    box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+}
+
+.galeria-multimedia h2 {
+    font-size: 2.2rem;
+    color: #000000;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+/* =========================
+   SECCIONES INTERNAS
+   =========================
+*/
+.galeria-seccion {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 28px;
+    margin-bottom: 28px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+    border-left: 4px solid #1d4ed8;
+}
+
+.galeria-seccion h3 {
+    font-size: 1.3rem;
+    color: #0f172a;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   GALERÍA DE IMÁGENES
+   =========================
+*/
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 16px;
+}
+
+.galeria-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+/* =========================
+   AUDIO
+   =========================
+*/
+.galeria-seccion audio {
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+}
+
+/* =========================
+   VIDEO
+   =========================
+*/
+.galeria-seccion video {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+/* =========================
+   IFRAME MAPA
+   =========================
+*/
+.galeria-seccion iframe {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+}
+
+/* =========================
+   RESPONSIVE
+   =========================
+*/
+@media (max-width: 768px) {
+    .servicio-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .servicio-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .galeria-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicios-container h2,
+    .galeria-multimedia h2 {
+        font-size: 1.8rem;
+    }
+}

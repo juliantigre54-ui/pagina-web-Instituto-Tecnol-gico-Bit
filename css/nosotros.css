@@ -1,0 +1,319 @@
+/* =========================
+   CONTENEDOR PRINCIPAL
+   =========================
+   Centra el contenido de la página y limita su ancho
+   para mejorar la lectura.
+*/
+.pagina {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 16px;
+}
+
+/* =========================
+   HEADER
+   =========================
+   Diseña el encabezado con logo y navegación.
+*/
+.encabezado {
+    background-color: #ffffff;
+    border-radius: 14px;
+    padding: 16px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 12px;
+    z-index: 10;
+}
+
+/* =========================
+   BRANDING
+   =========================
+   Organiza logo + nombre institucional usando Flexbox.
+*/
+.marca {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.marca img {
+    width: 120px;
+}
+
+.marca h1 {
+    color: #1d4ed8;
+    font-size: 1.8rem;
+}
+
+.lema {
+    color: #475569;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   NAVEGACIÓN
+   =========================
+   Menú principal horizontal.
+*/
+.navegacion {
+    margin-top: 12px;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 10px 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.menu > li > a:hover {
+    background-color: #e2e8f0;
+}
+
+/* =========================
+   SUBMENÚ
+   =========================
+   Se despliega al pasar el mouse.
+*/
+.menu-desplegable {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 180px;
+    padding: 8px 0;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.tiene-submenu:hover > .menu-desplegable {
+    display: block;
+}
+
+.menu-desplegable a {
+    display: block;
+    padding: 8px 14px;
+    color: #0f172a;
+    text-decoration: none;
+}
+
+.menu-desplegable a:hover {
+    background-color: #eff6ff;
+}
+
+/* =========================
+   MAIN
+   =========================
+*/
+main {
+    padding: 24px 0 32px;
+}
+
+section {
+    background-color: white;
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   SECCIÓN PRINCIPAL
+   =========================
+   Hero inicial de la página Nosotros.
+*/
+.principal {
+    padding: 22px;
+    border-radius: 16px;
+}
+
+.contenedor-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: center;
+}
+
+.texto-principal h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    color: #0f172a;
+    margin-bottom: 10px;
+}
+
+.texto-principal p {
+    color: #475569;
+}
+
+.imagen-principal img {
+    width: 100%;
+    border-radius: 16px;
+    min-height: 220px;
+    object-fit: cover;
+}
+
+/* =========================
+   TARJETAS DE CONTENIDO
+   =========================
+   Historia, misión, visión y perfil.
+*/
+.grilla-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.tarjeta {
+    background-color: white;
+    border: 1px solid #dbeafe;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.imagen-tarjeta {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.cuerpo-tarjeta {
+    padding: 18px;
+}
+
+.cuerpo-tarjeta h2 {
+    color: #0f172a;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.cuerpo-tarjeta p {
+    color: #475569;
+}
+
+/* =========================
+   INSTALACIONES
+   =========================
+   Presenta recursos físicos del instituto.
+*/
+.instalaciones h2,
+.galeria-titulo,
+.video-titulo {
+    color: #0f172a;
+    margin-bottom: 12px;
+}
+
+.instalaciones p {
+    color: #334155;
+    margin-bottom: 14px;
+}
+
+.tarjetas-instalaciones {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+.tarjeta-instalacion {
+    background-color: white;
+    border: 1px solid #dbeafe;
+    padding: 16px;
+    border-radius: 14px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Iconos de instalaciones */
+.icono-instalacion {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background-color: #2563eb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+/* Texto de tarjetas */
+.contenido-instalacion h3 {
+    color: #0f172a;
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.contenido-instalacion p {
+    margin: 0;
+    color: #475569;
+}
+
+/* =========================
+   GALERÍA
+   =========================
+*/
+.galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+}
+
+.imagen-galeria {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid #dbeafe;
+}
+
+.imagen-galeria img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+}
+
+/* =========================
+   VIDEO
+   =========================
+*/
+.contenedor-video {
+    border-radius: 14px;
+    overflow: hidden;
+    background-color: black;
+}
+
+.video-instalacion {
+    width: 100%;
+    min-height: 260px;
+}
+
+/* =========================
+   RESPONSIVE
+   =========================
+   Adapta diseño a móviles.
+*/
+@media (max-width: 860px) {
+    .contenedor-principal,
+    .grilla-tarjetas,
+    .tarjetas-instalaciones,
+    .galeria-imagenes {
+        grid-template-columns: 1fr;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+}

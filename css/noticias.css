@@ -1,0 +1,168 @@
+/* =========================
+   RESET GENERAL
+   =========================
+   Elimina márgenes y paddings por defecto
+   y facilita el cálculo de tamaños.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   HERO DE NOTICIAS
+   =========================
+   Sobrescribe estilos globales para que
+   el texto salga negro.
+*/
+.page-hero,
+.page-hero h1,
+.page-hero p,
+.page-hero .hero-label {
+    color: #000000;
+}
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+   =========================
+*/
+.noticias-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 24px;
+}
+
+/* =========================
+   NOTICIA DESTACADA
+   =========================
+*/
+.noticia-destacada {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 24px;
+    padding: 28px;
+    margin-bottom: 32px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+/* Imágenes */
+.noticia-img,
+.noticia-card-img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 20px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Contenido de noticia destacada */
+.noticia-info {
+    flex: 1;
+    min-width: 280px;
+}
+
+/* Etiqueta azul */
+.noticia-tag {
+    display: inline-block;
+    background-color: #1d4ed8;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    margin-bottom: 16px;
+}
+
+.noticia-info h2 {
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.noticia-info time {
+    display: block;
+    margin-bottom: 16px;
+    color: #475569;
+}
+
+.noticia-info p {
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #000000;
+}
+
+/* Botón */
+.noticia-cta {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #1d4ed8;
+    color: white;
+    text-decoration: none;
+    border-radius: 999px;
+    transition: 0.3s;
+}
+
+.noticia-cta:hover {
+    background-color: #1e40af;
+}
+
+/* =========================
+   GRID DE NOTICIAS
+   =========================
+*/
+.noticias-grid {
+    display: grid;
+    gap: 24px;
+}
+
+/* Tarjeta de noticia */
+.noticia-card {
+    display: grid;
+    grid-template-columns: 320px 1fr;
+    gap: 20px;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 8px 26px rgba(15, 23, 42, 0.08);
+}
+
+.noticia-card-text h3 {
+    color: #000000;
+    margin-bottom: 12px;
+}
+
+.noticia-card-text time {
+    display: block;
+    margin-bottom: 14px;
+    color: #475569;
+}
+
+.noticia-card-text p {
+    color: #000000;
+    line-height: 1.7;
+}
+
+/* =========================
+   RESPONSIVE
+   =========================
+*/
+@media (max-width: 880px) {
+    .noticia-destacada,
+    .noticia-card {
+        display: block;
+    }
+
+    .noticia-img,
+    .noticia-card-img {
+        max-width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .noticias-container {
+        padding: 0 16px;
+    }
+}
+

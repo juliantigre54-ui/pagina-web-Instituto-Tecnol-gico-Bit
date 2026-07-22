@@ -1,0 +1,295 @@
+/* =========================
+   RESET GENERAL
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #eaf2ff;
+    color: #0f172a;
+    line-height: 1.6;
+    body {
+    background-image: url(../Img/Fondo\ header.png);
+}
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   ESTRUCTURA GENERAL
+========================= */
+.page {
+    max-width: 1200px;
+    margin: auto;
+    padding: 16px;
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.branding {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.branding img {
+    width: 100px;
+}
+
+.branding h1 {
+    color: #1d4ed8;
+}
+
+.tagline {
+    color: #475569;
+}
+
+/* =========================
+   MENU
+========================= */
+.site-nav {
+    margin-top: 16px;
+}
+
+.menu {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    display: block;
+    padding: 12px 16px;
+    background: #f8fafc;
+    border-radius: 12px;
+    color: #0f172a;
+}
+
+.menu a:hover {
+    background: #dbeafe;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    min-width: 220px;
+    padding: 8px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.con-submenu:hover .submenu {
+    display: block;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+    padding: 30px 0;
+}
+
+/* =========================
+   HERO CON FONDO
+========================= */
+.page-hero {
+    background-image:
+        linear-gradient(rgba(15,23,42,0.65), rgba(15,23,42,0.65)),
+        url("../Img/contacto-fondo.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 80px 50px;
+    border-radius: 24px;
+    margin-bottom: 30px;
+}
+
+.hero-label,
+.page-hero h1,
+.page-hero p {
+    color: white;
+}
+
+.page-hero h1 {
+    font-size: 2.8rem;
+    margin: 12px 0;
+}
+
+/* =========================
+   CONTACTO
+========================= */
+.contacto-container {
+    display: grid;
+    gap: 30px;
+}
+
+.contacto-formulario,
+.contacto-info {
+    background: white;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.contacto-formulario h2,
+.contacto-info h2 {
+    margin-bottom: 20px;
+}
+
+/* FORM */
+.contacto-formulario form {
+    display: grid;
+    gap: 24px;
+}
+
+.contacto-formulario fieldset {
+    border: none;
+    background: #f8fafc;
+    padding: 24px;
+    border-radius: 18px;
+}
+
+.contacto-formulario legend {
+    color: #1d4ed8;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.contacto-formulario label {
+    display: block;
+    margin: 12px 0 8px;
+    font-weight: bold;
+}
+
+.contacto-formulario input,
+.contacto-formulario select,
+.contacto-formulario textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 12px;
+    border: 2px solid #dbeafe;
+    font-size: 1rem;
+}
+
+.contacto-formulario input:focus,
+.contacto-formulario select:focus,
+.contacto-formulario textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.contacto-botones {
+    display: flex;
+    gap: 16px;
+}
+
+.contacto-botones button {
+    padding: 14px 28px;
+    border: none;
+    border-radius: 999px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button[type="submit"] {
+    background: #1d4ed8;
+    color: white;
+}
+
+button[type="reset"] {
+    background: #e2e8f0;
+}
+
+/* INFO */
+.contacto-info {
+    background: linear-gradient(135deg,#1d4ed8,#0f172a);
+    color: white;
+}
+
+.contacto-info h2,
+.contacto-info p,
+.contacto-info a,
+.contacto-info li {
+    color: white;
+}
+
+.contacto-info ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+
+/* FOOTER */
+footer {
+    margin-top: 40px;
+    background-color: rgba(11, 23, 50, 0.95);
+    padding: 24px;
+    border-radius: 18px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* RESPONSIVE */
+@media (min-width: 1024px) {
+    .contacto-container {
+        grid-template-columns: 1.5fr 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .contacto-botones {
+        flex-direction: column;
+    }
+}
+
